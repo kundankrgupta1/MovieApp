@@ -66,13 +66,11 @@ Welcome to the **MovieApp**, a full-stack web application where users can browse
 
 ## 🚀 Live Demo
 
-> Coming Soon…
-
----
+🌐 [Live Demo](https://movie-app-blush-phi.vercel.app/)
 
 ## 📁 GitHub Repo
 
-🔗 [GitHub Repository](https://github.com/kundankrgupta1/eCommerce-Project/)
+🔗 [GitHub Repository](https://github.com/kundankrgupta1/MovieApp)
 
 ---
 
@@ -99,7 +97,7 @@ Welcome to the **MovieApp**, a full-stack web application where users can browse
 For any queries or suggestions, feel free to connect:
 
 **Kundan Kumar Gupta**  
-📧 [Email](mailto:your-email@example.com)  
+👤 [Portfolio](https://kundanportfolio1.netlify.app/)
 🔗 [GitHub](https://github.com/kundankrgupta1)
 
 ---
