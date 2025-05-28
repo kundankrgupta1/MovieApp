@@ -48,6 +48,8 @@ const addMovie = async (req, res) => {
 
 const getAllMovies = async (req, res) => {
 	const { _id } = req.user;
+	const { sort, search } = req.query;
+
 	try {
 		const user = await userModel.findById(_id).select("-password");
 
@@ -58,7 +60,22 @@ const getAllMovies = async (req, res) => {
 			})
 		}
 
-		const movies = await movieModel.find();
+		let query = {};
+
+		if (search) {
+			query.name = { $regex: search, $options: "i" };
+		}
+
+		let movieQuery = movieModel.find(query);
+
+
+		if (sort === "asc") {
+			movieQuery = movieQuery.sort({ year: 1 });
+		} else if (sort === "desc") {
+			movieQuery = movieQuery.sort({ year: -1 });
+		}
+
+		const movies = await movieQuery;
 
 		return res.status(200).json({
 			movies: movies

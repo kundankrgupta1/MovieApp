@@ -7,7 +7,7 @@ import { ContextAPI } from '../Context/ContextProvider';
 const Login = () => {
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
-	const { setIsAuth, setToken } = useContext(ContextAPI);
+	const { setIsAuth, setToken, setUserData } = useContext(ContextAPI);
 	const navigate = useNavigate();
 	const [message, setMessage] = useState("")
 	const [error, setError] = useState(null)
@@ -21,6 +21,7 @@ const Login = () => {
 				setMessage(res.data.message)
 				setIsAuth(true)
 				setToken(res.data.token)
+				setUserData(res.data.user)
 				localStorage.setItem("token", res.data.token)
 				localStorage.setItem("user", JSON.stringify(res.data.user))
 			}
@@ -36,9 +37,9 @@ const Login = () => {
 
 	return (
 		<div className="w-full">
-			<form onSubmit={handleSubmit} className="m-auto mt-8 px-12 py-20 w-[500px] border-2 rounded-lg">
+			<form onSubmit={handleSubmit} className="m-auto mt-8 p-4 md:p-8 w-[300px] md:w-[400px] border-2 rounded-lg">
 				<h1 className="text-2xl font-bold text-center">Login</h1>
-					<p>admin: k@g.com && password: 123123</p> normal user can signing up with email and password
+				<p>admin: <br /> k@g.com && password: 123123</p> normal user can signing up with email and password
 				<div className='flex flex-col gap-6'>
 					<div className='w-full flex flex-col gap-2'>
 						<label>Email: <span className='text-red-600'>*</span></label>

@@ -6,6 +6,7 @@ import Login from '../auth/Login'
 import Signup from '../auth/Signup'
 import AddMovie from '../Components/AddMovie'
 import SingleMoviePage from '../Components/SingleMoviePage'
+import Fav from '../Components/Fav'
 
 const AllRoutes = () => {
 	return (
@@ -27,6 +28,12 @@ const AllRoutes = () => {
 					<SingleMoviePage />
 				</PrivateContext>
 			} />
+			<Route path="/movie/fav" element={
+				<PrivateContext>
+					<Fav />
+				</PrivateContext>
+			} />
+
 		</Routes>
 	)
 }

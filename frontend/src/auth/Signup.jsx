@@ -29,7 +29,7 @@ const Signup = () => {
 	}
 	return (
 		<div className="w-full">
-			<form onSubmit={handleSubmit} className="m-auto mt-8 px-12 py-16 w-[500px] border-2 rounded-lg">
+			<form onSubmit={handleSubmit} className="m-auto mt-8 p-4 md:p-8 w-[300px] md:w-[400px] border-2 rounded-lg">
 				<h1 className="text-2xl font-bold text-center">Registration</h1>
 
 				<div className='flex flex-col gap-6'>
