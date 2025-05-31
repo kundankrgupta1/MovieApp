@@ -46,7 +46,7 @@ const AddMovie = () => {
 				<div className='flex flex-col gap-6'>
 					<div className='w-full flex flex-col gap-2'>
 						<label>Poster: <span className='text-red-600'>*</span></label>
-						<input type="text" name='name' value={poster} onChange={(e) => setPoster(e.target.value)} placeholder='Poster'
+						<input type="text" name='poster' value={poster} onChange={(e) => setPoster(e.target.value)} placeholder='Poster'
 							className='border rounded-md px-4 py-2'
 						/>
 					</div>
@@ -58,7 +58,7 @@ const AddMovie = () => {
 					</div>
 					<div className='w-full flex flex-col gap-2'>
 						<label>Year: <span className='text-red-600'>*</span></label>
-						<input type="number" name='number' value={year} onChange={(e) => setYear(e.target.value)} placeholder='Year'
+						<input type="number" name='year' value={year} onChange={(e) => setYear(e.target.value)} placeholder='Year'
 							className='border rounded-md px-4 py-2'
 						/>
 					</div>
